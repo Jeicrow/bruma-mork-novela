@@ -1,56 +1,184 @@
-2025-12-27 23:59:16 UTC
-Linux-6.16.3-zen1-1-zen-x86_64-with-glibc2.42
-Ren'Py 8.3.4.24120703
+2025-12-28 01:16:42 UTC
+macOS-26.2-arm64-arm-64bit
+Ren'Py 8.5.0.25111603
 
-Early init took 0.10s
-Loading error handling took 0.06s
-Loading script took 0.16s
-Loading save slot metadata took 0.05s
-Loading persistent took 0.00s
-Running init code took 0.08s
-Loading analysis data took 0.03s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.03s
-Index archives took 0.00s
-Dump and make backups took 0.09s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.06s
+Early init took 24 ms
+Loading error handling took 15 ms
+Loading script took 66 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 19 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 1 ms
+Backing up script files to '/Users/jeicrow/Library/RenPy/backups/bruma-mork-novela':
+Dump and make backups took 21 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 16 ms
 DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.01s
-Load screen analysis took 0.05s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.13s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Interface start took 0.18s
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 4 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 15 ms
+Running _start took 0 ms
+Interface start took 225 ms
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
+primary display bounds: (0, 0, 1470, 956)
 swap interval: 1 frames
 Fullscreen mode.
-Vendor: "b'Intel'"
-Renderer: b'Mesa Intel(R) HD Graphics (BDW GT1)'
-Version: b'4.6 (Compatibility Profile) Mesa 25.2.1-arch1.4'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1366, 768) drawable=(1366, 768)
+Vendor: 'Apple'
+Renderer: 'Apple M2'
+Version: '2.1 Metal - 90.5'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1470, 923) drawable=(2940, 1846)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 923) drawable=(2940, 1846)
 Maximum texture size: 4096x4096
 
 Full traceback:
-  File "game/script.rpy", line 284, in script
-    jump capitulo2
-  File "/usr/share/renpy/renpy/ast.py", line 1705, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/usr/share/renpy/renpy/script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'capitulo2'.
+  File "game/script.rpy", line 10, in script
+    with flash_oscuro
+  File "renpy/ast.py", line 1574, in execute
+    trans = renpy.python.py_eval(self.expr)
+            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "renpy/python.py", line 1305, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1298, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 10, in <module>
+    with flash_oscuro
+         ^^^^^^^^^^^^
+NameError: name 'flash_oscuro' is not defined
 
 While running game code:
-  File "game/script.rpy", line 284, in script
-    jump capitulo2
-ScriptError: could not find label 'capitulo2'.
+  File "game/script.rpy", line 10, in script
+    with flash_oscuro
+  File "game/script.rpy", line 10, in <module>
+    with flash_oscuro
+         ^^^^^^^^^^^^
+NameError: name 'flash_oscuro' is not defined
+
+Full traceback:
+  File "game/script.rpy", line 18, in script call
+    call capitulo_1_inicio
+  File "game/capitulo1.rpy", line 84, in script
+    scene black with flash_oscuro
+  File "renpy/ast.py", line 1577, in execute
+    paired = renpy.python.py_eval(self.paired)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "renpy/python.py", line 1305, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1298, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/capitulo1.rpy", line 84, in <module>
+    scene black with flash_oscuro
+                     ^^^^^^^^^^^^
+NameError: name 'flash_oscuro' is not defined
+
+While running game code:
+  File "game/script.rpy", line 18, in script call
+    call capitulo_1_inicio
+  File "game/capitulo1.rpy", line 84, in script
+    scene black with flash_oscuro
+  File "game/capitulo1.rpy", line 84, in <module>
+    scene black with flash_oscuro
+                     ^^^^^^^^^^^^
+NameError: name 'flash_oscuro' is not defined
+
+Full traceback:
+  File "game/script.rpy", line 10, in script
+    with flash_oscuro
+  File "renpy/ast.py", line 1574, in execute
+    trans = renpy.python.py_eval(self.expr)
+            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "renpy/python.py", line 1305, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1298, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 10, in <module>
+    with flash_oscuro
+         ^^^^^^^^^^^^
+NameError: name 'flash_oscuro' is not defined
+
+While running game code:
+  File "game/script.rpy", line 10, in script
+    with flash_oscuro
+  File "game/script.rpy", line 10, in <module>
+    with flash_oscuro
+         ^^^^^^^^^^^^
+NameError: name 'flash_oscuro' is not defined
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 15 ms
+Loading script took 39 ms
+Loading save slot metadata took 7 ms
+Loading persistent took 0 ms
+Running init code took 15 ms
+Loading analysis data took 4 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 1 ms
+Dump and make backups took 19 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 18 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 8 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 99 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1470, 956)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'Apple'
+Renderer: 'Apple M2'
+Version: '2.1 Metal - 90.5'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 4278190080), 'shifts': (16, 8, 0, 24), 'losses': (0, 0, 0, 0), 'current_w': 1470, 'current_h': 956, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1470, 923) drawable=(2940, 1846)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1470, 923) drawable=(2940, 1846)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 10, in script
+    with flash_oscuro
+  File "renpy/ast.py", line 1574, in execute
+    trans = renpy.python.py_eval(self.expr)
+            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "renpy/python.py", line 1305, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1298, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 10, in <module>
+    with flash_oscuro
+         ^^^^^^^^^^^^
+NameError: name 'flash_oscuro' is not defined
+
+While running game code:
+  File "game/script.rpy", line 10, in script
+    with flash_oscuro
+  File "game/script.rpy", line 10, in <module>
+    with flash_oscuro
+         ^^^^^^^^^^^^
+NameError: name 'flash_oscuro' is not defined
