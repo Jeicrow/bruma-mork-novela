@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 79: invalid syntax
+    renpy.music.play("music/ambiental."mp3, channel="ambiental", loop=True, fadein=2.0)
+                                        ^
+
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Fri Feb 14 21:38:26 2025

@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 284, in script
+    jump capitulo2
+ScriptError: could not find label 'capitulo2'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 284, in script
+    jump capitulo2
+  File "/usr/share/renpy/renpy/ast.py", line 1705, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/usr/share/renpy/renpy/script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'capitulo2'.
+
+Linux-6.16.3-zen1-1-zen-x86_64-with-glibc2.42 x86_64
+Ren'Py 8.3.4.24120703
+Bruma_novela 1.0
+Sat Dec 27 21:00:11 2025

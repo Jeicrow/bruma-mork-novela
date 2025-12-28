@@ -1,0 +1,56 @@
+2025-12-27 23:59:16 UTC
+Linux-6.16.3-zen1-1-zen-x86_64-with-glibc2.42
+Ren'Py 8.3.4.24120703
+
+Early init took 0.10s
+Loading error handling took 0.06s
+Loading script took 0.16s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.05s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.18s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel'"
+Renderer: b'Mesa Intel(R) HD Graphics (BDW GT1)'
+Version: b'4.6 (Compatibility Profile) Mesa 25.2.1-arch1.4'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1366, 768) drawable=(1366, 768)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 284, in script
+    jump capitulo2
+  File "/usr/share/renpy/renpy/ast.py", line 1705, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/usr/share/renpy/renpy/script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'capitulo2'.
+
+While running game code:
+  File "game/script.rpy", line 284, in script
+    jump capitulo2
+ScriptError: could not find label 'capitulo2'.
